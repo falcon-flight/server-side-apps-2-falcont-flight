@@ -4,10 +4,6 @@ const express = require('express');
 
 const app = express();
 
-app.get('/nickname', (request, response) => {
-    response.send('falcon-flight');
-});
-
 // Import our controllers from their files. Notice how we're
 // giving the `require` built-in function the path a file
 // locally instead of a dependency that was installed as
@@ -32,6 +28,9 @@ app.set('view engine', 'html');
 // Now, attach our "controllers" to our "routes".
 app.get('/', indexControllers.index);
 app.get('/attendees', attendeeControllers.listAttendees);
+app.get('/nickname', (request, response) => {
+    response.send('falcon-flight');
+});
 
 // Start up the application and listen on the specified
 // port, or default to port 4000.
