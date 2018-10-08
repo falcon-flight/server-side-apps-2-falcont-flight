@@ -5,7 +5,12 @@ const allPeople = require('../models/people.js');
 function listAttendees(request, response) {
     // Store the value of the `q` GET parameter in the
     // `query` variable.
-    const query = request.query.q;
+    let query = query.request.q;
+    let peeps = allPeople;
+    if (query){
+        query = query.toLowerCase;
+        peeps = allPeople.filter(personName => personName.ToLowerCase().includes(query));
+    }
     const contextData = {
         title: 'List of attendees',
         peopleMatchignQuery: allPeople,
