@@ -9,9 +9,5 @@ const arrayOfPeople = [
 
 module.exports = arrayOfPeople;
 
-const filterItems = (query) => {
-  return module.exports((query) =>
-    module.exports.toLowerCase().indexOf(query.toLowerCase()) > -1
-  );
-}
+
 
