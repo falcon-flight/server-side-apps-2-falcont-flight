@@ -13,9 +13,9 @@ function listAttendees(request, response) {
     };
     const contextData = {
         title: 'List of attendees',
-        peopleMatchignQuery: allPeople,
+        peopleMatchignQuery: peeps,
     };
-    response.render('attendees', peeps);
+    response.render('attendees', contextData);
 }
 
 module.exports = {
