@@ -10,7 +10,7 @@ function listAttendees(request, response) {
     if (query){
         query = query.ToLowerCase;
         peeps = allPeople.filter(personName => personName.ToLowerCase().includes(query));
-    }
+    };
     const contextData = {
         title: 'List of attendees',
         peopleMatchignQuery: allPeople,
