@@ -15,7 +15,7 @@ function listAttendees(request, response) {
         title: 'List of attendees',
         peopleMatchignQuery: allPeople,
     };
-    response.render('attendees', contextData);
+    response.render('attendees', peeps);
 }
 
 module.exports = {
