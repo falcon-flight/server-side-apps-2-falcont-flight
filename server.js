@@ -28,8 +28,8 @@ app.set('view engine', 'html');
 // Now, attach our "controllers" to our "routes".
 app.get('/', indexControllers.index);
 app.get('/attendees', attendeeControllers.listAttendees);
-app.get('/nickname', (request, response) => {
-    response.send('falcon-flight');
+app.get('/nickname', (req, res) => {
+    res.send('falcon-flight');
 });
 
 // Start up the application and listen on the specified
