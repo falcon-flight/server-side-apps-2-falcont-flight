@@ -8,7 +8,7 @@ function listAttendees(request, response) {
     let query = query.request.q;
     let peeps = allPeople;
     if (query){
-        query = query.toLowerCase;
+        query = query.ToLowerCase;
         peeps = allPeople.filter(personName => personName.ToLowerCase().includes(query));
     }
     const contextData = {
